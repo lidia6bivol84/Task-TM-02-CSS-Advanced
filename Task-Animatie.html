@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <Task-Cerc-Animatie></Task-Cerc-Animatie>
+    </title>
+    <style>
+        body {
+            background-color: #050210;
+        }
+
+        main {
+            perspective: 400px;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 150px auto;
+        }
+
+        .cerc1 {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            border-style: dotted;
+            background-position: center;
+
+        }
+
+        .cerc2 {
+            position: absolute;
+            content: '';
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 100%;
+            background-position: center;
+            box-shadow:
+                inset 30px 30px 80px #b97aff,
+                inset -30px 30px 80px #55fb9f,
+                inset 0px 500px 80px #fb5dad,
+                inset 0px -500px 80px #fb5dad,
+                -3px -3px 20px rgba(177, 217, 243, 0.94),
+                3px 3px 20px rgba(177, 217, 243, 0.94);
+            animation: colorat 3s linear infinite;
+        }
+
+        .cerc3 {
+            position: absolute;
+            content: '';
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            height: 250px;
+            width: 250px;
+            background-color: black;
+            border-radius: 100%;
+            border: 2px solid;
+
+        }
+
+        .cercm {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            border: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: rgba(5, 3, 40, 0.9);
+            animation-name: interior;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+        }
+
+        @keyframes colorat {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes interior {
+
+            0% {
+                transform: scale(1);
+                transform: translate3D(0, 0, 1);
+
+            }
+
+            20% {
+                transform: scale(2);
+                transform: translate3D(0, 0, 1);
+            }
+
+            30% {
+                transform: scale(6);
+                transform: translate3D(0, 0, 1);
+            }
+
+            40% {
+                transform: scale(10);
+                transform: translate3D(0, 0, 1);
+            }
+
+            50% {
+                transform: scale(14);
+                transform: translate3D(0, 0, 1);
+            }
+
+            60% {
+                transform: scale(16);
+                transform: translate3D(0, 0, 1);
+            }
+
+            70% {
+                transform: scale(18);
+                transform: translate3D(0, 0, 1);
+            }
+
+            80% {
+                transform: scale(20);
+                transform: translate3D(0, 0, 1);
+            }
+
+            90% {
+                transform: scale(22);
+                transform: translate3D(0, 0, 1);
+            }
+
+            100% {
+                transform: scale(24);
+                transform: translate3D(0, 0, 1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="cerc1">
+            <div class="cerc2">
+                <div class="cerc3">
+                    <div class="cercm"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
